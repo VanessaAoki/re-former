@@ -9,13 +9,23 @@
   <input type="submit" value="Submit">
 </form> %>
 
+<%# 
+<%= form_tag("/users", method: "POST") do % >
+  <%= label_tag(:username, "Username:") % >
+  <%= text_field_tag(:username) % >
+  <%= label_tag(:email, "E-mail:") % >  
+  <%= email_field_tag(:email) % >
+  <%= label_tag(:password, "Password:")  % >
+  <%= password_field_tag(:password) % >
+  <%= submit_tag("Submit") % >
+<% end % > %>
 
-<%= form_tag("/users", method: "POST") do %>
-  <%= label_tag(:username, "Username:") %>
-  <%= text_field_tag(:username) %>
-  <%= label_tag(:email, "E-mail:") %>  
-  <%= email_field_tag(:email) %>
-  <%= label_tag(:password, "Password:")  %>
-  <%= password_field_tag(:password) %>
-  <%= submit_tag("Submit") %>
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Username:" %> <br>
+  <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+  <%= form.label :email, "E-mail:" %> <br>
+  <%= form.email_field :email, placeholder: "example@gmail.com" %> <br>
+  <%= form.label :password, "Password:" %> <br>
+  <%= form.password_field :password, placeholder: "Enter your password here" %> <br>
+  <%= form.submit %>
 <% end %>
