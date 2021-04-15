@@ -743,3 +743,447 @@ Started GET "/users/edit" for ::1 at 2021-04-15 13:50:42 -0400
   
 ActionController::RoutingError (No route matches [GET] "/users/edit"):
   
+Started GET "/users/new" for 127.0.0.1 at 2021-04-15 14:57:26 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 4780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 10051)
+Completed 200 OK in 91ms (Views: 48.2ms | ActiveRecord: 1.0ms | Allocations: 17260)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2021-04-15 14:57:32 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 15:01:23 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3774)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3844)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.0ms | Allocations: 10269)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x00000000008d90>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/Vanessa/edit" for 127.0.0.1 at 2021-04-15 15:01:38 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Vanessa"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.6ms | Allocations: 1291)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=Vanessa):
+  
+app/controllers/users_controller.rb:18:in `edit'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 15:02:23 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3164)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 4271)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000094e8>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 16:49:12 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3143)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3212)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.5ms | Allocations: 8303)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000a5a0>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/edit" for 127.0.0.1 at 2021-04-15 16:49:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 16:49:30 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3163)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000ab40>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/3/edit" for 127.0.0.1 at 2021-04-15 16:50:13 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3163)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000ae38>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/id:3/edit" for 127.0.0.1 at 2021-04-15 16:50:20 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"id:3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1268)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=id:3):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/:id3/edit" for 127.0.0.1 at 2021-04-15 16:50:30 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1265)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id3):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/:3/edit" for 127.0.0.1 at 2021-04-15 16:50:43 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1265)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:3):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/3/edit" for 127.0.0.1 at 2021-04-15 16:50:51 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3163)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 4266)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000b9f0>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/edit" for 127.0.0.1 at 2021-04-15 16:52:03 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/3/edit" for 127.0.0.1 at 2021-04-15 16:52:13 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3163)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000bfb8>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/:id=3/edit" for 127.0.0.1 at 2021-04-15 16:57:26 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id=3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1265)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id=3):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/:id/edit" for 127.0.0.1 at 2021-04-15 16:57:45 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1265)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:id):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/:3/edit" for 127.0.0.1 at 2021-04-15 16:57:53 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1265)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=:3):
+  
+app/controllers/users_controller.rb:18:in `edit'
+Started GET "/users/3/edit" for 127.0.0.1 at 2021-04-15 16:58:05 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3163)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4253)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000cb98>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/3/edit" for 127.0.0.1 at 2021-04-15 17:01:05 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 3278)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3347)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 8834)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000dd90>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/edit" for 127.0.0.1 at 2021-04-15 17:01:10 -0300
+Processing by UsersController#edit as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 620)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/users_controller.rb:20:in `edit'
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 17:01:23 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3230)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3298)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 4388)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000e380>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 17:01:44 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:22:in `edit'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3278)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3347)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.7ms | Allocations: 8834)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000f578>
+Did you mean?  users_path):
+    1: <%= form_with model: @user do |form| %>
+    2:   <%= form.label :username, "Username:" %> <br>
+    3:   <%= form.text_field :username, placeholder: "Enter your username" %> <br>
+    4:   <%= form.label :email, "E-mail:" %> <br>
+  
+app/views/users/edit.html.erb:1
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 17:07:42 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:22:in `edit'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 769)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3670)
+Completed 200 OK in 37ms (Views: 21.2ms | ActiveRecord: 0.7ms | Allocations: 8792)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2021-04-15 17:07:49 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Vanessa", "email"=>"v.aoki@me.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `update'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1688)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-04-15 17:07:49 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3426)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3891)
+
+
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2021-04-15 17:08:24 -0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3594)
+Completed 200 OK in 27ms (Views: 11.9ms | ActiveRecord: 2.1ms | Allocations: 8289)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-04-15 17:08:27 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3468)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 4736)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2021-04-15 17:08:36 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Vanessaaa", "email"=>"v.aoki@me.com", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `update'
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "Vanessaaa"], ["updated_at", "2021-04-15 20:08:36.488436"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:27:in `update'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:27:in `update'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 33ms (ActiveRecord: 9.7ms | Allocations: 5643)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-04-15 17:08:36 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3422)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3878)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
