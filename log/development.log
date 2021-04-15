@@ -719,3 +719,27 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 3883)
 
 
+Started GET "/users/edit" for ::1 at 2021-04-15 13:47:26 -0400
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for ::1 at 2021-04-15 13:48:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for ::1 at 2021-04-15 13:49:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for ::1 at 2021-04-15 13:49:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
+Started GET "/users/edit" for ::1 at 2021-04-15 13:50:42 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/edit"):
+  
