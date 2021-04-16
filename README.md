@@ -1,24 +1,68 @@
-# README
+<p align="center">
+  <a href="https://www.microverse.org/">
+    <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
+  </a>
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Bare Metal Forms and Helpers
+This is the Third project from the Ruby on Rails module, and we created a form that can create and edit Users - username, e-mail, and password.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Prerequisites
+To run this project, you need a computer with Ruby and Ruby on Rails installed.
+> If you are uncertain about how to install Ruby, check out this [tutorial](https://www.theodinproject.com/courses/ruby-programming/lessons/installing-ruby-ruby-programming) made by [The Odin Project](https://www.theodinproject.com/about).
 
-* System dependencies
+> If you are uncertain about how to install Ruby on Rails, check out this [tutorial](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/your-first-rails-application-ruby-on-rails) made by [The Odin Project](https://www.theodinproject.com/about).
 
-* Configuration
+### Setup
 
-* Database creation
+1. Clone the repository:
+```
+https://github.com/VanessaAoki/re-former.git
+```
+2. Type  `$ cd bin` to move to the bin folder, *you must be on this folder to execute the file*;
 
-* Database initialization
+3. Install all required gems by typing `$ bundle install` on the terminal;
 
-* How to run the test suite
+4. Execute `$ rails server` on the terminal and run `http://localhost:3000/users/new` on your browser;
 
-* Services (job queues, cache servers, search engines, etc.)
+5. To edit a user run `http://localhost:3000/users/:id/edit` and edit the chosen fields.
+ 
+## Built With
 
-* Deployment instructions
+- Ruby 3.0.0;
+- Ruby on Rails 6.1.3;
+- Ruby gems: sqlite3, puma, sass-rails, webpacker, turbolinks, jbuilder, rubocop;
+- Visual Studio, Git & GitHub;
 
-* ...
+## Authors
+
+👤 **Mih Julius**
+
+- GitHub: [@mihdim2020](https://github.com/@mihdim2020)
+- Twitter: [@mihndim](https://twitter.com/@mihndim)
+- LinkedIn: [Mih Julius](https://linkedin.com/Mih_Julius)
+
+👩🏼‍💻 **Vanessa Aoki**
+
+- GitHub: [@VanessaAoki](https://github.com/VanessaAoki)
+- Twitter: [@VanessaSAoki](https://twitter.com/VanessaSAoki)
+- Linkedin: [Vanessa Aoki](https://www.linkedin.com/in/vanessasaoki/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/VanessaAoki/re-former/issues).
+
+
+## Show your support
+
+Give an ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
