@@ -40,7 +40,7 @@ https://github.com/VanessaAoki/re-former.git
  
 ## Built With
 
-- Ruby 3.0.0;
+- Ruby 2.7.2;
 - Ruby on Rails 6.1.3;
 - Ruby gems: sqlite3, puma, sass-rails, webpacker, turbolinks, jbuilder, rubocop;
 - Visual Studio, Git & GitHub;
