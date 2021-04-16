@@ -34,9 +34,11 @@ https://github.com/VanessaAoki/re-former.git
 
 3. Install all required gems by typing `$ bundle install` on the terminal;
 
-4. Execute `$ rails server` on the terminal and run `http://localhost:3000/users/new` on your browser;
+4. Execute `$ rails server` on the terminal and run `http://localhost:3000/users/new` on your browser (*Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari etc.*) and create your user by filling the Username, E-mail and Password fields;
 
-5. To edit a user run `http://localhost:3000/users/:id/edit` and edit the chosen fields.
+5. To edit a user run `http://localhost:3000/users/:id/edit` in your browsew, edit the chosen fields, and hit the update button;
+
+6. After you are done, stop running the server by clicking `ctrl + C` on your terminal.
  
 ## Built With
 
